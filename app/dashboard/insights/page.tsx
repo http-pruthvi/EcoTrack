@@ -109,7 +109,7 @@ export default function InsightsPage() {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id as typeof activeTab)}
-            className={`pb-3 px-3 text-xs sm:text-sm font-semibold whitespace-nowrap border-b-2 transition-all select-none capitalize ${
+            className={`pb-3 px-3 text-xs sm:text-sm font-semibold whitespace-nowrap border-b-2 transition-all select-none capitalize focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none rounded-t-lg ${
               activeTab === tab.id
                 ? "border-emerald-600 text-emerald-700 dark:text-emerald-400"
                 : "border-transparent text-slate-400 hover:text-slate-650"

@@ -86,23 +86,17 @@ export default function DashboardPage() {
         newStreak = 1;
       } else {
         const today = new Date();
-        const diffTime = Math.abs(today.getTime() - lastCheck.getTime());
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        const todayDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        const lastCheckDate = new Date(lastCheck.getFullYear(), lastCheck.getMonth(), lastCheck.getDate());
         
-        // Check if last check-in was today
-        const isSameDay = 
-          lastCheck.getDate() === today.getDate() &&
-          lastCheck.getMonth() === today.getMonth() &&
-          lastCheck.getFullYear() === today.getFullYear();
+        const diffTime = todayDate.getTime() - lastCheckDate.getTime();
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
-        if (isSameDay) {
-          // Already checked in today, do nothing
+        if (diffDays === 0) {
           return;
-        } else if (diffDays <= 1) {
-          // Yesterday, increment streak
+        } else if (diffDays === 1) {
           newStreak += 1;
         } else {
-          // Streak broken, reset to 1
           newStreak = 1;
         }
       }
@@ -305,7 +299,7 @@ export default function DashboardPage() {
                 )}
               </CardContent>
               <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-                <Link href="/dashboard/insights" className="text-xs text-slate-400 hover:text-slate-650 font-semibold select-none underline block text-center">
+                <Link href="/dashboard/insights" className="text-xs text-slate-400 hover:text-slate-650 font-semibold select-none underline block text-center focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none rounded px-1 py-0.5">
                   Browse Other Insights
                 </Link>
                 {topSuggestion && (
@@ -334,7 +328,7 @@ export default function DashboardPage() {
           </h2>
           <Link
             href="/dashboard/insights"
-            className="text-xs font-semibold tracking-wide text-emerald-600 dark:text-primary-400 hover:underline flex items-center gap-1 transition-all"
+            className="text-xs font-semibold tracking-wide text-emerald-600 dark:text-primary-400 hover:underline flex items-center gap-1 transition-all focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none rounded px-1 py-0.5"
           >
             See All Insights
             <ArrowRight className="w-3.5 h-3.5" />

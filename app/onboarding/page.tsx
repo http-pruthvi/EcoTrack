@@ -321,7 +321,7 @@ export default function OnboardingPage() {
                     key={String(option.value)}
                     onClick={() => handleSelectOption(option.value)}
                     disabled={submitting}
-                    className={`w-full text-left p-4 rounded-xl border transition-all duration-200 hover-lift text-sm sm:text-base flex items-start gap-3.5 focus:outline-none focus:ring-2 focus:ring-emerald-500 ${
+                    className={`w-full text-left p-4 rounded-xl border transition-all duration-200 hover-lift text-sm sm:text-base flex items-start gap-3.5 focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none ${
                       isSelected
                         ? "border-emerald-600 dark:border-emerald-500 bg-emerald-50/40 dark:bg-emerald-950/20 text-emerald-800 dark:text-emerald-300 ring-1 ring-emerald-500"
                         : "border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-350 bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-800/40"
@@ -351,7 +351,7 @@ export default function OnboardingPage() {
                 type="button"
                 onClick={retreatStep}
                 disabled={currentStep === 0 || submitting}
-                className="flex items-center gap-1.5 text-xs font-semibold tracking-wider text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 uppercase disabled:opacity-30 disabled:pointer-events-none select-none transition-colors"
+                className="flex items-center gap-1.5 text-xs font-semibold tracking-wider text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 uppercase disabled:opacity-30 disabled:pointer-events-none select-none transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none rounded px-1 py-0.5"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Back
@@ -361,7 +361,7 @@ export default function OnboardingPage() {
                 type="button"
                 onClick={handleSkipWithDefault}
                 disabled={submitting}
-                className="text-xs text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 underline font-medium select-none"
+                className="text-xs text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 underline font-medium select-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none rounded px-1 py-0.5"
               >
                 Skip with Default
               </button>

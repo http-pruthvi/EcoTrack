@@ -79,7 +79,13 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
       )}
       
       {/* Progress Track */}
-      <div className={`w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-visible relative ${sizeClasses[size]}`}>
+      <div
+        role="progressbar"
+        aria-valuenow={value}
+        aria-valuemin={0}
+        aria-valuemax={max}
+        className={`w-full bg-slate-200 dark:bg-slate-850 rounded-full overflow-visible relative ${sizeClasses[size]}`}
+      >
         {/* Progress Fill */}
         <div
           className={`h-full rounded-full transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1) ${

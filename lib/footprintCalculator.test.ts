@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { calculateFootprint, HOME_BASE, DIET_BASE, SHOPPING_BASE } from "./footprintCalculator";
+import { calculateFootprint } from "./footprintCalculator";
 import { FootprintProfile } from "./firebase";
 
 describe("footprintCalculator", () => {

@@ -137,7 +137,7 @@ export default function LoginPage() {
                       onChange={(e) => setDisplayName(e.target.value)}
                       placeholder="Alex Green"
                       disabled={loading}
-                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:focus:ring-emerald-600 text-slate-900 dark:text-white"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus-visible:ring-2 focus-visible:ring-emerald-500 dark:focus-visible:ring-emerald-600 focus-visible:outline-none text-slate-900 dark:text-white"
                     />
                   </div>
                 </div>
@@ -155,7 +155,7 @@ export default function LoginPage() {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@example.com"
                     disabled={loading}
-                    className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:focus:ring-emerald-600 text-slate-900 dark:text-white"
+                    className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus-visible:ring-2 focus-visible:ring-emerald-500 dark:focus-visible:ring-emerald-600 focus-visible:outline-none text-slate-900 dark:text-white"
                     required
                   />
                 </div>
@@ -173,7 +173,7 @@ export default function LoginPage() {
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="••••••••"
                     disabled={loading}
-                    className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:focus:ring-emerald-600 text-slate-900 dark:text-white"
+                    className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus-visible:ring-2 focus-visible:ring-emerald-500 dark:focus-visible:ring-emerald-600 focus-visible:outline-none text-slate-900 dark:text-white"
                     required
                   />
                 </div>
@@ -201,7 +201,7 @@ export default function LoginPage() {
             <button
               onClick={handleGoogleSignIn}
               disabled={loading}
-              className="w-full py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white hover:bg-slate-50 dark:bg-slate-950 dark:hover:bg-slate-900 text-sm font-semibold flex items-center justify-center gap-2 text-slate-700 dark:text-slate-350 focus:outline-none focus:ring-2 focus:ring-slate-300 transition-all select-none hover-lift"
+              className="w-full py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white hover:bg-slate-50 dark:bg-slate-950 dark:hover:bg-slate-900 text-sm font-semibold flex items-center justify-center gap-2 text-slate-700 dark:text-slate-350 focus-visible:ring-2 focus-visible:ring-slate-300 focus-visible:outline-none transition-all select-none hover-lift"
             >
               {/* Simple Google SVG Icon */}
               <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
@@ -229,7 +229,7 @@ export default function LoginPage() {
           <CardFooter className="justify-center border-t border-slate-100 dark:border-slate-800">
             <button
               onClick={() => setIsSignUp(!isSignUp)}
-              className="text-xs text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium select-none underline"
+              className="text-xs text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium select-none underline focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none rounded px-1 py-0.5"
             >
               {isSignUp ? "Already have an account? Sign In" : "New to EcoTrack? Create an account"}
             </button>

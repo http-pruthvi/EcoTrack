@@ -1,6 +1,14 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { evaluateStreak } from "./streakChecker";
-import { Habit } from "./firebase";
+import { evaluateStreak, verifyAndSyncHabitStreaks } from "./streakChecker";
+import { Habit, updateHabit } from "./firebase";
+
+vi.mock("./firebase", async (importOriginal) => {
+  const original = await importOriginal<typeof import("./firebase")>();
+  return {
+    ...original,
+    updateHabit: vi.fn(() => Promise.resolve())
+  };
+});
 
 describe("streakChecker evaluateStreak", () => {
   beforeEach(() => {
@@ -147,5 +155,60 @@ describe("streakChecker evaluateStreak", () => {
     expect(result.streakCount).toBe(4); // Saved!
     expect(result.wasFrozen).toBe(true);
     expect(result.freezesAvailable).toBe(0);
+  });
+});
+
+describe("verifyAndSyncHabitStreaks", () => {
+  beforeEach(() => {
+    vi.useFakeTimers();
+    vi.clearAllMocks();
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  it("should ignore suggested habits and not sync them", async () => {
+    const habit: Habit = {
+      id: "suggested-habit",
+      title: "Suggested",
+      category: "home",
+      estAnnualSavingsKg: 100,
+      effortWeight: 1,
+      status: "suggested",
+      streakCount: 0,
+      lastCheckedInAt: null,
+      createdAt: new Date().toISOString(),
+      freezeUsedDates: []
+    };
+
+    const synced = await verifyAndSyncHabitStreaks("user-1", [habit]);
+    expect(synced[0].streakCount).toBe(0);
+    expect(updateHabit).not.toHaveBeenCalled();
+  });
+
+  it("should call updateHabit and modify state if streak is reset", async () => {
+    vi.setSystemTime(new Date("2026-06-19T12:00:00Z"));
+
+    const habit: Habit = {
+      id: "active-habit",
+      title: "Active",
+      category: "home",
+      estAnnualSavingsKg: 100,
+      effortWeight: 1,
+      status: "active",
+      streakCount: 5,
+      lastCheckedInAt: "2026-06-10T12:00:00Z", // missed many days
+      createdAt: "2026-06-09T12:00:00Z",
+      freezeUsedDates: []
+    };
+
+    const synced = await verifyAndSyncHabitStreaks("user-1", [habit]);
+    expect(synced[0].streakCount).toBe(0);
+    expect(updateHabit).toHaveBeenCalledWith("user-1", "active-habit", {
+      streakCount: 0,
+      freezeUsedDates: [],
+      lastCheckedInAt: null
+    });
   });
 });

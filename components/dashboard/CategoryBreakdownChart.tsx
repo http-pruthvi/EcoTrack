@@ -180,7 +180,7 @@ export const CategoryBreakdownChart: React.FC<CategoryBreakdownChartProps> = ({ 
         <CardFooter className="justify-center border-t border-slate-100 dark:border-slate-800 py-3.5 bg-slate-50/40 dark:bg-slate-950/20">
           <Link
             href={`/dashboard/insights?category=${largestSegment.name}`}
-            className="text-xs font-semibold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 hover:underline flex items-center gap-1.5 transition-all group"
+            className="text-xs font-semibold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 hover:underline flex items-center gap-1.5 transition-all group focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none rounded px-1 py-0.5"
           >
             <span>Your biggest category is {categoryFriendlyNames[largestSegment.name].toLowerCase()} &mdash; see what helps</span>
             <span className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
