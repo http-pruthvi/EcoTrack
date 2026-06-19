@@ -182,7 +182,7 @@ export default function ProfilePage() {
                 <select
                   value={answers.homeType || ""}
                   onChange={(e) => handleChange("homeType", e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:ring-2 focus:ring-emerald-500 text-slate-800 dark:text-slate-200"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none text-slate-800 dark:text-slate-200"
                 >
                   <option value="apartment">Apartment / Condo</option>
                   <option value="house_small">Small House</option>
@@ -201,7 +201,7 @@ export default function ProfilePage() {
                   max="20"
                   value={answers.householdSize || 1}
                   onChange={(e) => handleChange("householdSize", parseInt(e.target.value) || 1)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:ring-2 focus:ring-emerald-500 text-slate-800 dark:text-slate-200"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none text-slate-800 dark:text-slate-200"
                 />
               </div>
 
@@ -213,7 +213,7 @@ export default function ProfilePage() {
                 <select
                   value={answers.heatingFuel || ""}
                   onChange={(e) => handleChange("heatingFuel", e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:ring-2 focus:ring-emerald-500 text-slate-800 dark:text-slate-200"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none text-slate-800 dark:text-slate-200"
                 >
                   <option value="electric">Electric Heat</option>
                   <option value="gas">Natural Gas</option>
@@ -230,7 +230,7 @@ export default function ProfilePage() {
                 <select
                   value={answers.dietPattern || ""}
                   onChange={(e) => handleChange("dietPattern", e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:ring-2 focus:ring-emerald-500 text-slate-800 dark:text-slate-200"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none text-slate-800 dark:text-slate-200"
                 >
                   <option value="meat_heavy">Meat Heavy</option>
                   <option value="meat_moderate">Meat Moderate</option>
@@ -247,7 +247,7 @@ export default function ProfilePage() {
                 <select
                   value={answers.primaryCommute || ""}
                   onChange={(e) => handleChange("primaryCommute", e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:ring-2 focus:ring-emerald-500 text-slate-800 dark:text-slate-200"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none text-slate-800 dark:text-slate-200"
                 >
                   <option value="car_solo">Drive Alone</option>
                   <option value="carpool">Carpool</option>
@@ -269,7 +269,7 @@ export default function ProfilePage() {
                     max="500"
                     value={answers.commuteDistanceKm || 0}
                     onChange={(e) => handleChange("commuteDistanceKm", parseInt(e.target.value) || 0)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:ring-2 focus:ring-emerald-500 text-slate-800 dark:text-slate-200"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none text-slate-800 dark:text-slate-200"
                   />
                 </div>
               )}
@@ -285,7 +285,7 @@ export default function ProfilePage() {
                   max="100"
                   value={answers.flightsPerYear || 0}
                   onChange={(e) => handleChange("flightsPerYear", parseInt(e.target.value) || 0)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:ring-2 focus:ring-emerald-500 text-slate-800 dark:text-slate-200"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none text-slate-800 dark:text-slate-200"
                 />
               </div>
 
@@ -297,7 +297,7 @@ export default function ProfilePage() {
                 <select
                   value={answers.shoppingLevel || ""}
                   onChange={(e) => handleChange("shoppingLevel", e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:ring-2 focus:ring-emerald-500 text-slate-800 dark:text-slate-200"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none text-slate-800 dark:text-slate-200"
                 >
                   <option value="minimal">Minimalist</option>
                   <option value="moderate">Average Consumer</option>

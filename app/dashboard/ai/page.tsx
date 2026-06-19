@@ -470,7 +470,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                       placeholder="Paste your Gemini API Key here (AIzaSy...)"
                       value={geminiKey}
                       onChange={(e) => setGeminiKey(e.target.value)}
-                      className="flex-1 px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs text-slate-800 dark:text-white focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                      className="flex-1 px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs text-slate-800 dark:text-white focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none"
                     />
                     <div className="flex gap-2">
                       <Button type="submit" size="sm" variant="primary" className="text-xs font-semibold px-4 py-1.5">
@@ -529,7 +529,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                     onChange={(e) => setChatInput(e.target.value)}
                     placeholder="Ask about reducing transport footprint, home insulation tips..."
                     disabled={chatLoading}
-                    className="flex-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="flex-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm text-slate-800 dark:text-white focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none"
                   />
                   <Button type="submit" variant="primary" disabled={chatLoading} className="py-3 px-4">
                     <Send className="w-4 h-4" />
@@ -754,7 +754,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                         setSelectedCountry(e.target.value);
                         setSelectedRegion("Federal");
                       }}
-                      className="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                      className="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none"
                     >
                       <option value="All">All Countries</option>
                       <option value="US">United States</option>
@@ -770,7 +770,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                       <select
                         value={selectedRegion}
                         onChange={(e) => setSelectedRegion(e.target.value)}
-                        className="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                        className="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none"
                       >
                         <option value="All">All Regions</option>
                         <option value="Federal">Federal / National</option>
@@ -790,7 +790,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                     value={incentiveSearch}
                     onChange={(e) => setIncentiveSearch(e.target.value)}
                     placeholder="Search rebate keywords (solar, pump, car...)"
-                    className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                    className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none"
                   />
                 </div>
               </div>

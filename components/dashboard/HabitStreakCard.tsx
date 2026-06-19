@@ -44,7 +44,10 @@ export const HabitStreakCard: React.FC<HabitStreakCardProps> = ({
     if (usedDates.length === 0) return false;
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
-    const yesterdayStr = yesterday.toISOString().split("T")[0];
+    const yYear = yesterday.getFullYear();
+    const yMonth = String(yesterday.getMonth() + 1).padStart(2, "0");
+    const yDate = String(yesterday.getDate()).padStart(2, "0");
+    const yesterdayStr = `${yYear}-${yMonth}-${yDate}`;
     return usedDates.includes(yesterdayStr);
   };
 

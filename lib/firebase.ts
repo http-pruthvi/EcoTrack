@@ -388,6 +388,23 @@ export const updateUserProfile = async (uid: string, updates: Partial<UserProfil
   }
 };
 
+export const getUserProfile = async (uid: string): Promise<UserProfile | null> => {
+  if (isMockEnabled) {
+    const profiles = getLocalData<Record<string, UserProfile>>("ecotrack_profiles", {});
+    return profiles[uid] || null;
+  } else {
+    try {
+      const docRef = doc(db!, "users", uid);
+      const docSnap = await getDoc(docRef);
+      return docSnap.exists() ? (docSnap.data() as UserProfile) : null;
+    } catch (e) {
+      console.warn("Firestore error in getUserProfile, falling back to mock:", e);
+      isMockEnabled = true;
+      return getUserProfile(uid);
+    }
+  }
+};
+
 // ----------------------------------------------------
 // Firestore: users/{userId}/footprintProfile/current
 // ----------------------------------------------------

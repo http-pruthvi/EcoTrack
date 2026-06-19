@@ -51,7 +51,7 @@ export const Sidebar: React.FC = () => {
             <Link
               key={item.name}
               href={item.href}
-              className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group ${
+              className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 ${
                 isActive
                   ? "bg-primary-600 text-white shadow-lg shadow-primary-900/20"
                   : "text-slate-400 hover:bg-slate-800 hover:text-slate-100"
@@ -79,7 +79,7 @@ export const Sidebar: React.FC = () => {
         )}
         <button
           onClick={() => logout()}
-          className="flex items-center gap-3 w-full px-4 py-2.5 text-left text-sm text-slate-400 hover:text-secondary-400 rounded-xl hover:bg-slate-800/50 transition-all group"
+          className="flex items-center gap-3 w-full px-4 py-2.5 text-left text-sm text-slate-400 hover:text-secondary-400 rounded-xl hover:bg-slate-800/50 transition-all group focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
         >
           <LogOut className="w-4.5 h-4.5 transition-transform group-hover:translate-x-1" />
           <span>Sign Out</span>

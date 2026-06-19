@@ -66,7 +66,7 @@ export const FootprintSummaryCard: React.FC<FootprintSummaryCardProps> = ({
               </div>
               <button
                 onClick={() => setShowComparison(false)}
-                className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 focus:outline-none p-0.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+                className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none p-0.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
                 title="Hide comparison details"
               >
                 <X className="w-3.5 h-3.5" />

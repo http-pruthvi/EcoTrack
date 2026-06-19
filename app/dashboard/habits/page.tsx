@@ -59,17 +59,15 @@ export default function HabitsPage() {
         newStreak = 1;
       } else {
         const today = new Date();
-        const diffTime = Math.abs(today.getTime() - lastCheck.getTime());
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        const todayDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        const lastCheckDate = new Date(lastCheck.getFullYear(), lastCheck.getMonth(), lastCheck.getDate());
         
-        const isSameDay = 
-          lastCheck.getDate() === today.getDate() &&
-          lastCheck.getMonth() === today.getMonth() &&
-          lastCheck.getFullYear() === today.getFullYear();
+        const diffTime = todayDate.getTime() - lastCheckDate.getTime();
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
-        if (isSameDay) {
+        if (diffDays === 0) {
           return;
-        } else if (diffDays <= 1) {
+        } else if (diffDays === 1) {
           newStreak += 1;
         } else {
           newStreak = 1;
@@ -157,11 +155,11 @@ export default function HabitsPage() {
               />
               
               {/* Deactivate hover-button */}
-              <div className="absolute top-4 right-4 md:right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <div className="absolute top-4 right-4 md:right-8 opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-200">
                 <button
                   onClick={() => handleDeactivate(habit.id)}
                   disabled={deactivatingId === habit.id}
-                  className="inline-flex items-center gap-1 text-[10px] uppercase font-bold text-slate-400 hover:text-rose-500 focus:outline-none p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800/40 select-none transition-colors"
+                  className="inline-flex items-center gap-1 text-[10px] uppercase font-bold text-slate-400 hover:text-rose-500 focus-visible:ring-2 focus-visible:ring-rose-500 focus-visible:outline-none p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800/40 select-none transition-colors"
                   title="Pause and archive habit"
                 >
                   <Ban className="w-3.5 h-3.5" />

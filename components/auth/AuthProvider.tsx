@@ -8,7 +8,8 @@ import {
   loginUser,
   registerUser,
   loginWithGoogle as googleLogin,
-  logoutUser
+  logoutUser,
+  getUserProfile
 } from "@/lib/firebase";
 
 interface AuthContextType {
@@ -43,12 +44,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const refreshUser = async () => {
     if (!user) return;
     try {
-      const profiles = localStorage.getItem("ecotrack_profiles");
-      if (profiles) {
-        const parsed = JSON.parse(profiles);
-        if (parsed[user.uid]) {
-          setUser(parsed[user.uid]);
-        }
+      const profile = await getUserProfile(user.uid);
+      if (profile) {
+        setUser(profile);
       }
     } catch (e) {
       console.error("Error refreshing user:", e);

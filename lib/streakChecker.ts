@@ -64,7 +64,10 @@ export function evaluateStreak(habit: Habit): StreakEvaluation {
     // Apply freeze for yesterday
     const yesterday = new Date(today);
     yesterday.setDate(yesterday.getDate() - 1);
-    const yesterdayStr = yesterday.toISOString().split("T")[0];
+    const yYear = yesterday.getFullYear();
+    const yMonth = String(yesterday.getMonth() + 1).padStart(2, "0");
+    const yDate = String(yesterday.getDate()).padStart(2, "0");
+    const yesterdayStr = `${yYear}-${yMonth}-${yDate}`;
     
     updatedUsedDates.push(yesterdayStr);
     wasFrozen = true;

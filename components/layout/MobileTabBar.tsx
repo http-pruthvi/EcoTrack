@@ -34,7 +34,7 @@ export const MobileTabBar: React.FC = () => {
           <Link
             key={item.name}
             href={item.href}
-            className="flex flex-col items-center justify-center flex-1 py-1 px-2 text-center group"
+            className="flex flex-col items-center justify-center flex-1 py-1 px-2 text-center group focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none rounded-xl"
           >
             <div
               className={`p-1.5 rounded-xl transition-all duration-300 ${
