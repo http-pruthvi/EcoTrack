@@ -154,7 +154,7 @@ export default function ProfilePage() {
               </h4>
               <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                 {savingsDelta && savingsDelta > 0 ? (
-                  <span>your changes reduced your footprint by <strong className="text-emerald-700 dark:text-emerald-450">~{Math.round(savingsDelta)} kg CO2e / year</strong>! outstanding progress.</span>
+                  <span>your changes reduced your footprint by <strong className="text-emerald-700 dark:text-emerald-400">~{Math.round(savingsDelta)} kg CO2e / year</strong>! outstanding progress.</span>
                 ) : savingsDelta && savingsDelta < 0 ? (
                   <span>your recalculated carbon footprint has adjusted to ~{Math.abs(Math.round(savingsDelta))} kg CO2e / year higher based on the new parameters.</span>
                 ) : (
@@ -276,7 +276,7 @@ export default function ProfilePage() {
 
               {/* Flights */}
               <div className="space-y-2">
-                <label className="text-xs font-semibold text-slate-550 tracking-wide uppercase">
+                <label className="text-xs font-semibold text-slate-500 tracking-wide uppercase">
                   Round-Trip Flights / Year
                 </label>
                 <input
@@ -308,7 +308,7 @@ export default function ProfilePage() {
             </div>
 
             {/* CTA action */}
-            <div className="pt-4 border-t border-slate-100 dark:border-slate-850 flex items-center justify-end">
+            <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-end">
               <Button
                 type="submit"
                 variant="primary"

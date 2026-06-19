@@ -42,7 +42,7 @@ export default function DashboardLayout({
               <div className="h-6 bg-slate-200 dark:bg-slate-800 rounded w-48" />
               <div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-32" />
             </div>
-            <div className="w-10 h-10 bg-slate-250 dark:bg-slate-800 rounded-full" />
+            <div className="w-10 h-10 bg-slate-200 dark:bg-slate-800 rounded-full" />
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -55,7 +55,7 @@ export default function DashboardLayout({
 
         <div className="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 flex items-center justify-between">
           {[1, 2, 3, 4, 5].map((i) => (
-            <div key={i} className="w-8 h-8 bg-slate-200 dark:bg-slate-850 rounded-xl animate-pulse" />
+            <div key={i} className="w-8 h-8 bg-slate-200 dark:bg-slate-800 rounded-xl animate-pulse" />
           ))}
         </div>
       </div>

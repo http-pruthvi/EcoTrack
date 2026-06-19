@@ -383,7 +383,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
           onClick={() => setActiveTab("chatbot")}
           className={`flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-all shrink-0 select-none ${
             activeTab === "chatbot"
-              ? "border-emerald-600 text-emerald-600 dark:text-emerald-450 dark:border-emerald-450"
+              ? "border-emerald-600 text-emerald-600 dark:text-emerald-400 dark:border-emerald-400"
               : "border-transparent text-slate-400 hover:text-slate-700 dark:hover:text-slate-300"
           }`}
         >
@@ -395,7 +395,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
           onClick={() => setActiveTab("scanner")}
           className={`flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-all shrink-0 select-none ${
             activeTab === "scanner"
-              ? "border-emerald-600 text-emerald-600 dark:text-emerald-450 dark:border-emerald-450"
+              ? "border-emerald-600 text-emerald-600 dark:text-emerald-400 dark:border-emerald-400"
               : "border-transparent text-slate-400 hover:text-slate-700 dark:hover:text-slate-300"
           }`}
         >
@@ -407,7 +407,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
           onClick={() => setActiveTab("incentives")}
           className={`flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-all shrink-0 select-none ${
             activeTab === "incentives"
-              ? "border-emerald-600 text-emerald-600 dark:text-emerald-450 dark:border-emerald-450"
+              ? "border-emerald-600 text-emerald-600 dark:text-emerald-400 dark:border-emerald-400"
               : "border-transparent text-slate-400 hover:text-slate-700 dark:hover:text-slate-300"
           }`}
         >
@@ -419,7 +419,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
           onClick={() => setActiveTab("grid")}
           className={`flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-all shrink-0 select-none ${
             activeTab === "grid"
-              ? "border-emerald-600 text-emerald-600 dark:text-emerald-450 dark:border-emerald-450"
+              ? "border-emerald-600 text-emerald-600 dark:text-emerald-400 dark:border-emerald-400"
               : "border-transparent text-slate-400 hover:text-slate-700 dark:hover:text-slate-300"
           }`}
         >
@@ -431,7 +431,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
           onClick={() => setActiveTab("leagues")}
           className={`flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-all shrink-0 select-none ${
             activeTab === "leagues"
-              ? "border-emerald-600 text-emerald-600 dark:text-emerald-450 dark:border-emerald-450"
+              ? "border-emerald-600 text-emerald-600 dark:text-emerald-400 dark:border-emerald-400"
               : "border-transparent text-slate-400 hover:text-slate-700 dark:hover:text-slate-300"
           }`}
         >
@@ -448,10 +448,10 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
             <div className="lg:col-span-3 space-y-4">
               <Card className="h-[550px] flex flex-col justify-between border border-slate-200/50 dark:border-slate-800/80 shadow-md">
                 {/* Chat Panel Header */}
-                <div className="px-6 py-4 border-b border-slate-100 dark:border-slate-850 flex items-center justify-between">
+                <div className="px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <div className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse" />
-                    <span className="font-semibold text-slate-850 dark:text-slate-250 text-sm">EcoGPT Sustainability Engine</span>
+                    <span className="font-semibold text-slate-800 dark:text-slate-200 text-sm">EcoGPT Sustainability Engine</span>
                   </div>
                   <button
                     onClick={() => setShowKeyInput(!showKeyInput)}
@@ -503,7 +503,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                         className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm whitespace-pre-line ${
                           msg.role === "user"
                             ? "bg-emerald-600 text-white rounded-br-none"
-                            : "bg-slate-100 dark:bg-slate-850 text-slate-850 dark:text-slate-100 rounded-bl-none border border-slate-200/30 dark:border-slate-700/20"
+                            : "bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-100 rounded-bl-none border border-slate-200/30 dark:border-slate-700/20"
                         }`}
                       >
                         {msg.text}
@@ -512,7 +512,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                   ))}
                   {chatLoading && (
                     <div className="flex justify-start">
-                      <div className="bg-slate-100 dark:bg-slate-850 text-slate-500 dark:text-slate-400 rounded-2xl rounded-bl-none px-4 py-3 text-sm flex items-center gap-2 border border-slate-200/30 dark:border-slate-700/20 shadow-sm animate-pulse">
+                      <div className="bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 rounded-2xl rounded-bl-none px-4 py-3 text-sm flex items-center gap-2 border border-slate-200/30 dark:border-slate-700/20 shadow-sm animate-pulse">
                         <Loader2 className="w-4 h-4 animate-spin text-emerald-500" />
                         <span>EcoGPT is thinking...</span>
                       </div>
@@ -522,14 +522,14 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                 </div>
 
                 {/* Chat Input form */}
-                <form onSubmit={handleSendChatMessage} className="p-4 border-t border-slate-100 dark:border-slate-850 flex gap-2">
+                <form onSubmit={handleSendChatMessage} className="p-4 border-t border-slate-100 dark:border-slate-800 flex gap-2">
                   <input
                     type="text"
                     value={chatInput}
                     onChange={(e) => setChatInput(e.target.value)}
                     placeholder="Ask about reducing transport footprint, home insulation tips..."
                     disabled={chatLoading}
-                    className="flex-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm text-slate-850 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="flex-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
                   />
                   <Button type="submit" variant="primary" disabled={chatLoading} className="py-3 px-4">
                     <Send className="w-4 h-4" />
@@ -540,7 +540,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
 
             <div className="space-y-4 text-left">
               <Card className="p-5 border border-slate-200/50 dark:border-slate-800/80 shadow-md">
-                <h4 className="text-sm font-semibold text-slate-850 dark:text-slate-250 flex items-center gap-2 mb-3">
+                <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200 flex items-center gap-2 mb-3">
                   <Brain className="w-4.5 h-4.5 text-emerald-500" />
                   AI Context Load
                 </h4>
@@ -554,7 +554,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                     <p>
                       Your active footprint profile is fed directly to EcoGPT to tailor answers.
                     </p>
-                    <div className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-850 bg-slate-50/50 dark:bg-slate-950/20 space-y-2">
+                    <div className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/20 space-y-2">
                       <div className="flex justify-between">
                         <span>Total CO2:</span>
                         <strong className="font-semibold text-slate-700 dark:text-slate-300">~{Math.round(footprint.total)} kg/yr</strong>
@@ -575,23 +575,23 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
               </Card>
 
               <Card className="p-5 border border-slate-200/50 dark:border-slate-800/80 shadow-md">
-                <h4 className="text-sm font-semibold text-slate-850 dark:text-slate-250 mb-3">Suggested Prompt Starters</h4>
+                <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200 mb-3">Suggested Prompt Starters</h4>
                 <div className="flex flex-col gap-2">
                   <button
                     onClick={() => setChatInput("What are the most impactful low-cost home adjustments in my region?")}
-                    className="text-xs text-left p-2.5 rounded-xl border border-slate-200/60 dark:border-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-850/30 text-slate-700 dark:text-slate-300 transition-colors"
+                    className="text-xs text-left p-2.5 rounded-xl border border-slate-200/60 dark:border-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-800/30 text-slate-700 dark:text-slate-300 transition-colors"
                   >
                     Home energy-saving tips...
                   </button>
                   <button
                     onClick={() => setChatInput("Compare carbon output of standard solo diesel drive vs train commute.")}
-                    className="text-xs text-left p-2.5 rounded-xl border border-slate-200/60 dark:border-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-850/30 text-slate-700 dark:text-slate-300 transition-colors"
+                    className="text-xs text-left p-2.5 rounded-xl border border-slate-200/60 dark:border-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-800/30 text-slate-700 dark:text-slate-300 transition-colors"
                   >
                     Compare commuting options...
                   </button>
                   <button
                     onClick={() => setChatInput("Draft a 3-day vegan low carbon recipe meal plan.")}
-                    className="text-xs text-left p-2.5 rounded-xl border border-slate-200/60 dark:border-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-850/30 text-slate-700 dark:text-slate-300 transition-colors"
+                    className="text-xs text-left p-2.5 rounded-xl border border-slate-200/60 dark:border-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-800/30 text-slate-700 dark:text-slate-300 transition-colors"
                   >
                     Low carbon recipe plan...
                   </button>
@@ -660,7 +660,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                 {scanStatus === "scanning" && (
                   <div className="space-y-4">
                     {/* Glowing Scan Bar */}
-                    <div className="w-full bg-slate-100 dark:bg-slate-850 h-2.5 rounded-full overflow-hidden relative">
+                    <div className="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden relative">
                       <div className="bg-emerald-500 h-full w-1/3 rounded-full animate-infiniteSlide" />
                     </div>
                     {/* Step log list */}
@@ -686,7 +686,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                         <TrendingDown className="w-5 h-5 animate-bounce" />
                       </div>
                       <div className="space-y-1">
-                        <h4 className="text-sm font-semibold text-slate-850 dark:text-slate-250 font-medium">Emissions Analysis Result</h4>
+                        <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200 font-medium">Emissions Analysis Result</h4>
                         <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                           {scanResult.summary}
                         </p>
@@ -696,13 +696,13 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                     <div className="grid grid-cols-2 gap-4">
                       <div className="p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-950/10">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">VALUE EXTRACTED</span>
-                        <strong className="text-xl font-semibold text-slate-850 dark:text-slate-200">
+                        <strong className="text-xl font-semibold text-slate-800 dark:text-slate-200">
                           {scanResult.metricValue} {scanResult.type === "grocery_receipt" ? "items" : scanResult.type === "utility_gas" ? "therms" : "kWh"}
                         </strong>
                       </div>
                       <div className="p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-950/10">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">CO2 IMPACT ESTIMATE</span>
-                        <strong className="text-xl font-semibold text-slate-850 dark:text-slate-200">
+                        <strong className="text-xl font-semibold text-slate-800 dark:text-slate-200">
                           {scanResult.co2ImpactKg} kg
                         </strong>
                       </div>
@@ -712,7 +712,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
               </div>
 
               {scanStatus === "completed" && (
-                <div className="pt-4 border-t border-slate-100 dark:border-slate-850 flex gap-2">
+                <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex gap-2">
                   <Button
                     variant="outline"
                     onClick={() => {
@@ -803,7 +803,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                   <Card key={inc.id} className="p-5 border border-slate-200/50 dark:border-slate-800/80 hover:shadow-md transition-all flex flex-col justify-between items-stretch">
                     <div className="space-y-3">
                       <div className="flex items-start justify-between gap-3">
-                        <span className="px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/20 text-emerald-600 dark:text-emerald-450 text-[10px] font-semibold tracking-wide uppercase">
+                        <span className="px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/20 text-emerald-600 dark:text-emerald-400 text-[10px] font-semibold tracking-wide uppercase">
                           {inc.category}
                         </span>
                         <span className="text-xs text-slate-400 font-medium flex items-center gap-1">
@@ -811,13 +811,13 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                           {inc.country} ({inc.region})
                         </span>
                       </div>
-                      <h4 className="font-semibold text-slate-955 dark:text-white text-base leading-snug">{inc.title}</h4>
+                      <h4 className="font-semibold text-slate-950 dark:text-white text-base leading-snug">{inc.title}</h4>
                       <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">{inc.description}</p>
                     </div>
-                    <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-850 flex items-center justify-between gap-3">
+                    <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-3">
                       <div className="space-y-0.5">
                         <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">ESTIMATED SUBSIDY</span>
-                        <strong className="text-sm font-bold text-emerald-600 dark:text-emerald-450">{inc.amount}</strong>
+                        <strong className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{inc.amount}</strong>
                       </div>
                       <a
                         href={inc.link}
@@ -832,7 +832,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                   </Card>
                 ))
               ) : (
-                <div className="col-span-2 text-center py-16 text-slate-400 text-xs border border-dashed border-slate-200 dark:border-slate-850 rounded-2xl">
+                <div className="col-span-2 text-center py-16 text-slate-400 text-xs border border-dashed border-slate-200 dark:border-slate-800 rounded-2xl">
                   No green subsidies match your current filters. Try relaxing filters or clearing the search text.
                 </div>
               )}
@@ -861,7 +861,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
 
               {/* Graphic Chart bar representation */}
               <div className="space-y-4">
-                <div className="h-48 flex items-end justify-between gap-1 sm:gap-2 px-2 pt-6 pb-2 border-b border-l border-slate-250/30 dark:border-slate-800 relative">
+                <div className="h-48 flex items-end justify-between gap-1 sm:gap-2 px-2 pt-6 pb-2 border-b border-l border-slate-200/30 dark:border-slate-800 relative">
                   {/* Grid clean reference lines */}
                   <div className="absolute left-0 right-0 top-1/4 border-t border-dashed border-slate-200/50 dark:border-slate-800/50 pointer-events-none" />
                   <div className="absolute left-0 right-0 top-2/4 border-t border-dashed border-slate-200/50 dark:border-slate-800/50 pointer-events-none" />
@@ -881,7 +881,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                           style={{ height: `${hourData.clean}%` }}
                           className={`w-full rounded-t-md transition-all ${
                             isOptimal
-                              ? "bg-emerald-450 hover:bg-emerald-500 shadow-sm"
+                              ? "bg-emerald-400 hover:bg-emerald-500 shadow-sm"
                               : isDirty
                               ? "bg-stone-400 hover:bg-stone-500"
                               : "bg-teal-400/80 hover:bg-teal-500"
@@ -913,11 +913,11 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
             {/* Smart Recommendations */}
             <Card className="p-6 border border-slate-200/50 dark:border-slate-800/80 shadow-md flex flex-col justify-between">
               <div className="space-y-4">
-                <h4 className="text-sm font-semibold text-slate-850 dark:text-slate-250">Smart Grid Insights</h4>
+                <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200">Smart Grid Insights</h4>
                 <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex gap-3">
                   <Info className="w-5 h-5 text-amber-500 shrink-0" />
                   <div className="space-y-1">
-                    <h5 className="text-xs font-semibold text-slate-855 dark:text-slate-200">Avoid High Loads at 18:00</h5>
+                    <h5 className="text-xs font-semibold text-slate-800 dark:text-slate-200">Avoid High Loads at 18:00</h5>
                     <p className="text-[11px] text-slate-500 dark:text-slate-450 leading-relaxed">
                       Peak residential energy demands force local utilities to activate fossil-fuel peaker plants. Delay heavy loads until 22:00 to save carbon.
                     </p>
@@ -927,7 +927,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                 <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex gap-3">
                   <Zap className="w-5 h-5 text-emerald-500 shrink-0 animate-bounce" />
                   <div className="space-y-1">
-                    <h5 className="text-xs font-semibold text-slate-855 dark:text-slate-200">Solar Peak at 12:00</h5>
+                    <h5 className="text-xs font-semibold text-slate-800 dark:text-slate-200">Solar Peak at 12:00</h5>
                     <p className="text-[11px] text-slate-500 dark:text-slate-450 leading-relaxed">
                       Solar grid generation hits 91% capacity. This is the optimal window to charge electric vehicles, run washing cycles, or operate heat pumps.
                     </p>
@@ -935,7 +935,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 dark:border-slate-855 text-center">
+              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 text-center">
                 <span className="text-[10px] text-slate-450 font-medium">Automatic Alerts sync enabled</span>
               </div>
             </Card>
@@ -962,7 +962,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                     className={`w-full p-4 rounded-2xl flex items-center justify-between border transition-all ${
                       selectedDistrict === league.name
                         ? "border-emerald-500 bg-emerald-500/10"
-                        : "border-slate-150 dark:border-slate-850 hover:bg-slate-50 dark:hover:bg-slate-950/20"
+                        : "border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-950/20"
                     }`}
                   >
                     <div className="flex items-center gap-4">
@@ -977,7 +977,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                       </div>
                     </div>
                     <div className="text-right">
-                      <span className="text-xs font-bold text-emerald-600 dark:text-emerald-450 block">-{league.totalSavedKg} kg CO2</span>
+                      <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 block">-{league.totalSavedKg} kg CO2</span>
                       <span className="text-[10px] text-slate-400 font-medium">this month</span>
                     </div>
                   </button>
@@ -988,18 +988,18 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
             {/* Local Hub Info Card */}
             <div className="space-y-4">
               <Card className="p-6 border border-slate-200/50 dark:border-slate-800/80 shadow-md">
-                <h4 className="text-sm font-semibold text-slate-850 dark:text-slate-250 mb-3">District Spotlight: {selectedDistrict}</h4>
-                <p className="text-xs text-slate-505 dark:text-slate-400 leading-relaxed mb-4">
+                <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200 mb-3">District Spotlight: {selectedDistrict}</h4>
+                <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
                   Citizens of <strong>{selectedDistrict}</strong> have actively marked 85% of recommended habits as completed this week. Their primary target is transport reduction.
                 </p>
                 <div className="space-y-2 text-xs">
-                  <div className="flex justify-between py-1 border-b border-slate-100 dark:border-slate-850">
+                  <div className="flex justify-between py-1 border-b border-slate-100 dark:border-slate-800">
                     <span className="text-slate-450">Active Challenges:</span>
                     <strong className="font-semibold text-slate-700 dark:text-slate-350">Car-Free Sundays</strong>
                   </div>
-                  <div className="flex justify-between py-1 border-b border-slate-100 dark:border-slate-850">
+                  <div className="flex justify-between py-1 border-b border-slate-100 dark:border-slate-800">
                     <span className="text-slate-450">Co2 Saved:</span>
-                    <strong className="font-semibold text-emerald-600 dark:text-emerald-450">12,450 kg</strong>
+                    <strong className="font-semibold text-emerald-600 dark:text-emerald-400">12,450 kg</strong>
                   </div>
                   <div className="flex justify-between py-1">
                     <span className="text-slate-450">Next Target:</span>
@@ -1009,7 +1009,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
               </Card>
 
               <Card className="p-6 border border-slate-200/50 dark:border-slate-800/80 shadow-md">
-                <h4 className="text-sm font-semibold text-slate-850 dark:text-slate-250 mb-2">Join a Civic Challenge</h4>
+                <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200 mb-2">Join a Civic Challenge</h4>
                 <p className="text-xs text-slate-400 leading-relaxed mb-4">
                   Represent your street or office. Build habits alongside neighbors and trace collective metrics on the local municipal board.
                 </p>

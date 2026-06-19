@@ -79,7 +79,7 @@ export const HabitStreakCard: React.FC<HabitStreakCardProps> = ({
             <h3 className="text-lg font-medium text-slate-800 dark:text-slate-100 leading-snug">
               {habit.title}
             </h3>
-            <span className="text-xs text-slate-550 dark:text-slate-400 block font-normal">
+            <span className="text-xs text-slate-500 dark:text-slate-400 block font-normal">
               Estimated savings: ~{Math.round(habit.estAnnualSavingsKg)} kg CO2e / year
             </span>
             
@@ -137,7 +137,7 @@ export const HabitStreakCard: React.FC<HabitStreakCardProps> = ({
         </div>
 
         {/* Action Controls */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-6 pt-4 border-t border-slate-150 dark:border-slate-850">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-6 pt-4 border-t border-slate-200 dark:border-slate-800">
           
           {/* Progress bar towards automated */}
           <div className="flex-1 space-y-2">
@@ -168,7 +168,7 @@ export const HabitStreakCard: React.FC<HabitStreakCardProps> = ({
                 }
               </span>
               {isCompleted && (
-                <span className="inline-flex items-center gap-1 text-[10px] uppercase font-bold tracking-wider text-emerald-600 dark:text-emerald-450 bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded-md border border-emerald-250/20">
+                <span className="inline-flex items-center gap-1 text-[10px] uppercase font-bold tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded-md border border-emerald-200/20">
                   Completed
                 </span>
               )}
@@ -178,7 +178,7 @@ export const HabitStreakCard: React.FC<HabitStreakCardProps> = ({
           {/* Check in button */}
           <div className="shrink-0 flex items-center justify-end">
             {checkedIn ? (
-              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 dark:text-emerald-450 bg-emerald-50 dark:bg-emerald-950/20 px-4 py-2.5 rounded-xl border border-emerald-200/40">
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/20 px-4 py-2.5 rounded-xl border border-emerald-200/40">
                 <CheckCircle className="w-4 h-4" />
                 Checked In Today
               </span>

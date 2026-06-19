@@ -65,7 +65,7 @@ export const InsightCard: React.FC<InsightCardProps> = ({
         </div>
 
         {/* Bottom controls */}
-        <div className="flex items-center justify-between gap-4 pt-2 border-t border-slate-100 dark:border-slate-850">
+        <div className="flex items-center justify-between gap-4 pt-2 border-t border-slate-100 dark:border-slate-800">
           
           {/* Effort dots */}
           <div className="space-y-0.5">

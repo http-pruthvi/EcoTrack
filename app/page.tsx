@@ -27,7 +27,7 @@ export default function LandingPage() {
       <main className="flex-1 flex flex-col justify-center items-center px-6 max-w-4xl mx-auto text-center space-y-8 pt-12 pb-16">
         
         {/* Intro tag */}
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100/50 dark:border-emerald-900/30 text-xs font-semibold text-emerald-700 dark:text-emerald-450 select-none">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100/50 dark:border-emerald-900/30 text-xs font-semibold text-emerald-700 dark:text-emerald-400 select-none">
           <Leaf className="w-3.5 h-3.5" />
           Meet EcoTrack
         </span>
@@ -59,7 +59,7 @@ export default function LandingPage() {
           {/* Pillar 1 */}
           <Card className="border border-slate-200/40 dark:border-slate-800/80 shadow-sm p-6 hover-lift bg-white dark:bg-slate-950">
             <CardContent className="p-0 space-y-4">
-              <div className="p-3 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-450 rounded-2xl w-fit">
+              <div className="p-3 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 rounded-2xl w-fit">
                 <Leaf className="w-6 h-6" />
               </div>
               <div className="space-y-1">

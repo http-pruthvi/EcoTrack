@@ -289,7 +289,7 @@ export default function DashboardPage() {
                 </div>
 
                 {topSuggestion ? (
-                  <div className="p-4 rounded-2xl border border-slate-150 dark:border-slate-850 bg-slate-50/50 dark:bg-slate-900/20 text-left space-y-2">
+                  <div className="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/20 text-left space-y-2">
                     <h4 className="text-sm font-medium text-slate-800 dark:text-slate-100">
                       {topSuggestion.title}
                     </h4>
@@ -299,12 +299,12 @@ export default function DashboardPage() {
                     </div>
                   </div>
                 ) : (
-                  <p className="text-xs text-slate-550 dark:text-slate-455 text-left leading-relaxed">
+                  <p className="text-xs text-slate-500 dark:text-slate-400 text-left leading-relaxed">
                     You have activated all suggested recommendations! Explore more templates on the opportunities catalog.
                   </p>
                 )}
               </CardContent>
-              <div className="pt-4 border-t border-slate-100 dark:border-slate-850 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                 <Link href="/dashboard/insights" className="text-xs text-slate-400 hover:text-slate-650 font-semibold select-none underline block text-center">
                   browse other insights
                 </Link>
@@ -334,7 +334,7 @@ export default function DashboardPage() {
           </h2>
           <Link
             href="/dashboard/insights"
-            className="text-xs font-semibold tracking-wide text-primary-655 dark:text-primary-400 hover:underline flex items-center gap-1 transition-all"
+            className="text-xs font-semibold tracking-wide text-emerald-600 dark:text-primary-400 hover:underline flex items-center gap-1 transition-all"
           >
             See All Insights
             <ArrowRight className="w-3.5 h-3.5" />

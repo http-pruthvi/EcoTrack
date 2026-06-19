@@ -67,7 +67,7 @@ export default function InsightsPage() {
     return (
       <div className="space-y-6 animate-pulse">
         <div className="h-6 bg-slate-200 dark:bg-slate-800 rounded w-1/4" />
-        <div className="h-10 bg-slate-200 dark:bg-slate-850 rounded-lg w-full" />
+        <div className="h-10 bg-slate-200 dark:bg-slate-800 rounded-lg w-full" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[1, 2, 3].map(i => (
             <div key={i} className="h-48 bg-slate-200 dark:bg-slate-800 rounded-2xl" />
@@ -111,7 +111,7 @@ export default function InsightsPage() {
             onClick={() => setActiveTab(tab.id as typeof activeTab)}
             className={`pb-3 px-3 text-xs sm:text-sm font-semibold whitespace-nowrap border-b-2 transition-all select-none capitalize ${
               activeTab === tab.id
-                ? "border-emerald-600 text-emerald-700 dark:text-emerald-450"
+                ? "border-emerald-600 text-emerald-700 dark:text-emerald-400"
                 : "border-transparent text-slate-400 hover:text-slate-650"
             }`}
           >
