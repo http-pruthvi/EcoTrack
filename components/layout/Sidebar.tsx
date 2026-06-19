@@ -37,7 +37,7 @@ export const Sidebar: React.FC = () => {
         </div>
         <div>
           <span className="font-semibold tracking-wide text-lg text-white block">EcoTrack</span>
-          <span className="text-xs text-slate-400">Carbon footprints made simple</span>
+          <span className="text-xs text-slate-400">Carbon Footprints Made Simple</span>
         </div>
       </div>
 
@@ -84,6 +84,9 @@ export const Sidebar: React.FC = () => {
           <LogOut className="w-4.5 h-4.5 transition-transform group-hover:translate-x-1" />
           <span>Sign Out</span>
         </button>
+        <div className="text-[10px] text-slate-500 text-center select-none font-medium pt-1">
+          Developed by Pruthvi
+        </div>
       </div>
     </aside>
   );

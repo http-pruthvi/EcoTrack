@@ -111,7 +111,7 @@ export default function ProfilePage() {
       setSuccess(true);
     } catch (error) {
       console.error("Error saving profile changes:", error);
-      alert("failed to save profile. please try again.");
+      alert("Failed to Save Profile. Please Try Again.");
     } finally {
       setSaving(false);
     }
@@ -154,11 +154,11 @@ export default function ProfilePage() {
               </h4>
               <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                 {savingsDelta && savingsDelta > 0 ? (
-                  <span>your changes reduced your footprint by <strong className="text-emerald-700 dark:text-emerald-400">~{Math.round(savingsDelta)} kg CO2e / year</strong>! outstanding progress.</span>
+                  <span>Your Changes Reduced Your Footprint by <strong className="text-emerald-700 dark:text-emerald-400">~{Math.round(savingsDelta)} kg CO2e / Year</strong>! Outstanding Progress.</span>
                 ) : savingsDelta && savingsDelta < 0 ? (
-                  <span>your recalculated carbon footprint has adjusted to ~{Math.abs(Math.round(savingsDelta))} kg CO2e / year higher based on the new parameters.</span>
+                  <span>Your Recalculated Carbon Footprint Has Adjusted to ~{Math.abs(Math.round(savingsDelta))} kg CO2e / Year Higher Based on the New Parameters.</span>
                 ) : (
-                  <span>no net difference in carbon totals, but your profile fields were synchronized.</span>
+                  <span>No Net Difference in Carbon Totals, But Your Profile Fields Were Synchronized.</span>
                 )}
               </p>
             </div>

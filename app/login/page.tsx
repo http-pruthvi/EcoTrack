@@ -54,16 +54,16 @@ export default function LoginPage() {
       
       // Friendly Firestore mapping
       if (error.code === "auth/invalid-credential" || error.message?.includes("invalid-credential")) {
-        errMsg = "incorrect email or password. please double check your details.";
+        errMsg = "Incorrect Email or Password. Please Double Check Your Details.";
       } else if (error.code === "auth/email-already-in-use" || error.message?.includes("email-already-in-use")) {
-        errMsg = "this email is already registered. try signing in instead.";
+        errMsg = "This Email Is Already Registered. Try Signing In Instead.";
       } else if (error.code === "auth/weak-password" || error.message?.includes("weak-password")) {
-        errMsg = "password must be at least 6 characters long.";
+        errMsg = "Password Must Be at Least 6 Characters Long.";
       } else if (error.code === "auth/invalid-email" || error.message?.includes("invalid-email")) {
-        errMsg = "please enter a valid email address.";
+        errMsg = "Please Enter a Valid Email Address.";
       }
       
-      setError(errMsg.toLowerCase());
+      setError(errMsg);
     } finally {
       setLoading(false);
     }
@@ -84,7 +84,7 @@ export default function LoginPage() {
       } else {
         console.error("Google sign in error:", error);
       }
-      setError("google sign in failed. please try again.");
+      setError("Google Sign In Failed. Please Try Again.");
     } finally {
       setLoading(false);
     }
@@ -135,7 +135,7 @@ export default function LoginPage() {
                       type="text"
                       value={displayName}
                       onChange={(e) => setDisplayName(e.target.value)}
-                      placeholder="alex green"
+                      placeholder="Alex Green"
                       disabled={loading}
                       className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:focus:ring-emerald-600 text-slate-900 dark:text-white"
                     />

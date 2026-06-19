@@ -35,11 +35,11 @@ export default function LandingPage() {
         {/* Main Title */}
         <div className="space-y-4">
           <h1 className="text-3xl sm:text-6xl font-medium tracking-tight leading-[1.1] text-slate-900 dark:text-white">
-            understand and reduce your <br className="hidden sm:inline" />
-            <span className="text-emerald-600 dark:text-emerald-500 font-semibold">carbon footprint</span>
+            Understand and Reduce Your <br className="hidden sm:inline" />
+            <span className="text-emerald-600 dark:text-emerald-500 font-semibold">Carbon Footprint</span>
           </h1>
           <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
-            personal carbon footprints can feel complex. EcoTrack makes it simple. take a 2 minute quiz, discover high-impact actions, and build daily habits with streak goals.
+            Personal carbon footprints can feel complex. EcoTrack makes it simple. Take a 2-minute quiz, discover high-impact actions, and build daily habits with streak goals.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export default function LandingPage() {
                   1. Rapid Footprint Quiz
                 </h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                  answer a few questions about your housing, transport, diet, and consumption volume for a custom annualized footprint estimate.
+                  Answer a few questions about your housing, transport, diet, and consumption volume for a custom annualized footprint estimate.
                 </p>
               </div>
             </CardContent>
@@ -84,7 +84,7 @@ export default function LandingPage() {
                   2. Efficiency Insights
                 </h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                  receive opportunities prioritized automatically based on carbon savings relative to the willpower required to maintain them.
+                  Receive opportunities prioritized automatically based on carbon savings relative to the willpower required to maintain them.
                 </p>
               </div>
             </CardContent>
@@ -101,7 +101,7 @@ export default function LandingPage() {
                   3. Habit Streaks
                 </h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                  practice active check-ins daily to lock down habit streaks. reach the 21-day threshold to make actions automatic.
+                  Practice active check-ins daily to lock down habit streaks. Reach the 21-day threshold to make actions automatic.
                 </p>
               </div>
             </CardContent>
@@ -113,7 +113,7 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="border-t border-slate-200 dark:border-slate-800 py-6 text-center text-xs text-slate-400">
-        &copy; {new Date().getFullYear()} EcoTrack. designed with care for individuals and the planet.
+        &copy; {new Date().getFullYear()} EcoTrack. Developed by Pruthvi. Designed with care for individuals and the planet.
       </footer>
 
     </div>

@@ -80,21 +80,21 @@ export const HabitStreakCard: React.FC<HabitStreakCardProps> = ({
               {habit.title}
             </h3>
             <span className="text-xs text-slate-500 dark:text-slate-400 block font-normal">
-              Estimated savings: ~{Math.round(habit.estAnnualSavingsKg)} kg CO2e / year
+              Estimated Savings: ~{Math.round(habit.estAnnualSavingsKg)} kg CO2e / Year
             </span>
             
             {/* Shield Notification for Protected State */}
             {yesterdayFrozen && (
               <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/20 px-2.5 py-1 rounded-lg border border-sky-200/20 mt-1">
                 <Shield className="w-3.5 h-3.5 fill-sky-500/10 text-sky-500" />
-                <span>Streak frozen yesterday &mdash; protected from resetting!</span>
+                <span>Streak Frozen Yesterday &mdash; Protected from Resetting!</span>
               </div>
             )}
             
             {/* Encourage if reset */}
             {habit.streakCount === 0 && !checkedIn && (
               <div className="text-[11px] text-slate-450 dark:text-slate-400 italic block mt-1">
-                Streak reset &mdash; every day is a fresh start.
+                Streak Reset &mdash; Every Day Is a Fresh Start.
               </div>
             )}
           </div>
@@ -130,7 +130,7 @@ export const HabitStreakCard: React.FC<HabitStreakCardProps> = ({
                   : "text-slate-300 dark:text-slate-700"
               }`} />
               <span className="text-[8px] font-bold text-slate-400 tracking-wider">
-                {freezesAvailable > 0 ? "READY" : "USED"}
+                {freezesAvailable > 0 ? "Ready" : "Used"}
               </span>
             </div>
           </div>
@@ -157,14 +157,14 @@ export const HabitStreakCard: React.FC<HabitStreakCardProps> = ({
               size="sm"
               easing="ease-in-cubic"
               markerValue={7}
-              markerLabel="Day 7: hardest part is almost over"
+              markerLabel="Day 7: Hardest Part Is Almost Over"
             />
             
             <div className="pt-2 flex items-center justify-between">
               <span className="text-[10px] text-slate-450 dark:text-slate-500 block leading-tight">
                 {isCompleted 
-                  ? "Amazing! You reached the 21-day mark and formed a lasting habit!" 
-                  : `${targetDays - habit.streakCount} more days to establish this routine.`
+                  ? "Amazing! You Reached the 21-Day Mark and Formed a Lasting Habit!" 
+                  : `${targetDays - habit.streakCount} More Days to Establish This Routine.`
                 }
               </span>
               {isCompleted && (

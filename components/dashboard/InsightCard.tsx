@@ -54,7 +54,7 @@ export const InsightCard: React.FC<InsightCardProps> = ({
             
             {/* Savings Pill */}
             <span className="text-[11px] font-semibold text-slate-500 dark:text-slate-400 px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800">
-              ~{Math.round(action.estAnnualSavingsKg)} kg / year
+              ~{Math.round(action.estAnnualSavingsKg)} kg / Year
             </span>
           </div>
 

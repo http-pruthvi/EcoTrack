@@ -581,19 +581,19 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                     onClick={() => setChatInput("What are the most impactful low-cost home adjustments in my region?")}
                     className="text-xs text-left p-2.5 rounded-xl border border-slate-200/60 dark:border-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-800/30 text-slate-700 dark:text-slate-300 transition-colors"
                   >
-                    Home energy-saving tips...
+                    Home Energy-Saving Tips...
                   </button>
                   <button
                     onClick={() => setChatInput("Compare carbon output of standard solo diesel drive vs train commute.")}
                     className="text-xs text-left p-2.5 rounded-xl border border-slate-200/60 dark:border-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-800/30 text-slate-700 dark:text-slate-300 transition-colors"
                   >
-                    Compare commuting options...
+                    Compare Commuting Options...
                   </button>
                   <button
                     onClick={() => setChatInput("Draft a 3-day vegan low carbon recipe meal plan.")}
                     className="text-xs text-left p-2.5 rounded-xl border border-slate-200/60 dark:border-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-800/30 text-slate-700 dark:text-slate-300 transition-colors"
                   >
-                    Low carbon recipe plan...
+                    Low Carbon Recipe Plan...
                   </button>
                 </div>
               </Card>
@@ -625,7 +625,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                   />
                   <Camera className="w-10 h-10 text-slate-400 mb-3" />
                   <span className="text-sm font-semibold text-slate-700 dark:text-slate-300 block mb-1">Click to Upload Document</span>
-                  <span className="text-[10px] text-slate-400">JPEG, PNG files are supported</span>
+                  <span className="text-[10px] text-slate-400">JPEG and PNG Files are Supported</span>
                 </div>
 
                 {scanImageName && (
@@ -673,7 +673,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                       ))}
                       <div className="animate-pulse flex items-center gap-1 text-slate-450 mt-2">
                         <span className="inline-block w-1 h-3.5 bg-emerald-400 animate-blink" />
-                        <span>scanning...</span>
+                        <span>Scanning...</span>
                       </div>
                     </div>
                   </div>
@@ -936,7 +936,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
               </div>
 
               <div className="pt-4 border-t border-slate-100 dark:border-slate-800 text-center">
-                <span className="text-[10px] text-slate-450 font-medium">Automatic Alerts sync enabled</span>
+                <span className="text-[10px] text-slate-450 font-medium">Automatic Alerts Sync Enabled</span>
               </div>
             </Card>
           </div>
@@ -978,7 +978,7 @@ Provide highly actionable, hyper-localized advice. Keep responses formatting cle
                     </div>
                     <div className="text-right">
                       <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 block">-{league.totalSavedKg} kg CO2</span>
-                      <span className="text-[10px] text-slate-400 font-medium">this month</span>
+                      <span className="text-[10px] text-slate-400 font-medium">This Month</span>
                     </div>
                   </button>
                 ))}

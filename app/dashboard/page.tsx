@@ -306,7 +306,7 @@ export default function DashboardPage() {
               </CardContent>
               <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                 <Link href="/dashboard/insights" className="text-xs text-slate-400 hover:text-slate-650 font-semibold select-none underline block text-center">
-                  browse other insights
+                  Browse Other Insights
                 </Link>
                 {topSuggestion && (
                   <Button

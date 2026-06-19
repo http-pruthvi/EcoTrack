@@ -40,7 +40,7 @@ export const FootprintSummaryCard: React.FC<FootprintSummaryCardProps> = ({
                 ~{formattedTotal}
               </span>
               <span className="text-sm font-semibold text-slate-500 dark:text-slate-400">
-                kg CO2e / year
+                kg CO2e / Year
               </span>
             </div>
           </div>
@@ -58,9 +58,9 @@ export const FootprintSummaryCard: React.FC<FootprintSummaryCardProps> = ({
                     : "bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400"
                 }`}>
                   {isLower ? (
-                    <span>{absPercentage}% lower</span>
+                    <span>{absPercentage}% Lower</span>
                   ) : (
-                    <span>{absPercentage}% higher</span>
+                    <span>{absPercentage}% Higher</span>
                   )}
                 </span>
               </div>
@@ -82,7 +82,7 @@ export const FootprintSummaryCard: React.FC<FootprintSummaryCardProps> = ({
           </div>
           <div className="space-y-1">
             <h4 className="text-sm font-medium text-slate-900 dark:text-slate-200">
-              You are making a difference!
+              You Are Making a Difference!
             </h4>
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
               You&apos;ve avoided approximately <strong className="text-emerald-700 dark:text-emerald-400">~{savingsThisMonth} kg CO2e</strong> this month through your active habits. {getEquivalent(savingsThisMonth)}

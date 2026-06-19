@@ -64,7 +64,7 @@ export default function OnboardingPage() {
   const questions: Question[] = [
     {
       id: "homeType",
-      title: "What type of home do you live in?",
+      title: "What Type of Home Do You Live In?",
       subtitle: "This helps us estimate your baseline housing energy emissions.",
       icon: Home,
       defaultValue: "apartment",
@@ -76,7 +76,7 @@ export default function OnboardingPage() {
     },
     {
       id: "householdSize",
-      title: "How many people live in your household?",
+      title: "How Many People Live in Your Household?",
       subtitle: "Shared energy resources are divided among household members.",
       icon: Users,
       defaultValue: 1,
@@ -89,7 +89,7 @@ export default function OnboardingPage() {
     },
     {
       id: "heatingFuel",
-      title: "What is your primary heating fuel?",
+      title: "What Is Your Primary Heating Fuel?",
       subtitle: "Different heating sources have widely varying environmental impacts.",
       icon: Flame,
       defaultValue: "electric",
@@ -102,7 +102,7 @@ export default function OnboardingPage() {
     },
     {
       id: "dietPattern",
-      title: "Which option best describes your diet?",
+      title: "Which Option Best Describes Your Diet?",
       subtitle: "Food represents a major pillar of daily greenhouse gas emissions.",
       icon: Utensils,
       defaultValue: "meat_moderate",
@@ -115,7 +115,7 @@ export default function OnboardingPage() {
     },
     {
       id: "primaryCommute",
-      title: "How do you primary commute to work/school?",
+      title: "How Do You Primarily Commute to Work or School?",
       subtitle: "Transportation represents the largest share of commute emissions.",
       icon: Car,
       defaultValue: "public_transit",
@@ -129,7 +129,7 @@ export default function OnboardingPage() {
     },
     {
       id: "commuteDistanceKm",
-      title: "What is your average daily commute distance?",
+      title: "What Is Your Average Daily Commute Distance?",
       subtitle: "Estimate the round-trip distance in kilometers.",
       icon: Navigation,
       defaultValue: 0,
@@ -142,7 +142,7 @@ export default function OnboardingPage() {
     },
     {
       id: "flightsPerYear",
-      title: "How many flights do you take per year?",
+      title: "How Many Flights Do You Take Per Year?",
       subtitle: "Count short, medium, and long-haul round trips.",
       icon: Plane,
       defaultValue: 0,
@@ -155,7 +155,7 @@ export default function OnboardingPage() {
     },
     {
       id: "shoppingLevel",
-      title: "What is your consumer goods shopping level?",
+      title: "What Is Your Consumer Goods Shopping Level?",
       subtitle: "Clothing, electronics, and home items have supply chain emissions.",
       icon: ShoppingBag,
       defaultValue: "moderate",
