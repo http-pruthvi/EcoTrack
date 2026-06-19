@@ -8,7 +8,8 @@ import {
   Lightbulb,
   CheckSquare,
   BarChart3,
-  User
+  User,
+  Sparkles
 } from "lucide-react";
 
 export const MobileTabBar: React.FC = () => {
@@ -16,6 +17,7 @@ export const MobileTabBar: React.FC = () => {
 
   const navItems = [
     { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
+    { name: "EcoAI", href: "/dashboard/ai", icon: Sparkles },
     { name: "Insights", href: "/dashboard/insights", icon: Lightbulb },
     { name: "Habits", href: "/dashboard/habits", icon: CheckSquare },
     { name: "History", href: "/dashboard/history", icon: BarChart3 },

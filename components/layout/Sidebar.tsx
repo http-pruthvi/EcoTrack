@@ -11,7 +11,8 @@ import {
   BarChart3,
   User,
   LogOut,
-  Leaf
+  Leaf,
+  Sparkles
 } from "lucide-react";
 
 export const Sidebar: React.FC = () => {
@@ -20,6 +21,7 @@ export const Sidebar: React.FC = () => {
 
   const navItems = [
     { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
+    { name: "EcoAI Hub", href: "/dashboard/ai", icon: Sparkles },
     { name: "Insights", href: "/dashboard/insights", icon: Lightbulb },
     { name: "Habits", href: "/dashboard/habits", icon: CheckSquare },
     { name: "History", href: "/dashboard/history", icon: BarChart3 },
